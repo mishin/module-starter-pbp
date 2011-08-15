@@ -1,7 +1,7 @@
 package Module::Starter::PBP;
 use base 'Module::Starter::Simple';
 
-use version; $VERSION = qv('0.0.3');
+use version; $VERSION = qv('0.0.4');
 
 use warnings;
 use strict;
@@ -281,7 +281,7 @@ Module::Starter::PBP - Create a module as recommended in "Perl Best Practices"
 
 =head1 VERSION
 
-This document describes Module::Starter::PBP version 0.0.3
+This document describes Module::Starter::PBP version 0.0.4
 
 
 =head1 SYNOPSIS

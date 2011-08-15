@@ -787,10 +787,21 @@ all_pod_files_ok();
 _____[ perlcritic.t ]___________________________________________________
 #!perl
 
-if (!require Test::Perl::Critic) {
-    Test::More::plan(
-        skip_all => "Test::Perl::Critic required for testing PBP compliance"
-    );
+use strict;
+use warnings;
+
+use Test::More;
+
+eval {
+    require Test::Perl::Critic;
+
+    my @config = ();    # Arguments for Perl::Critic->new() go here!
+    Test::Perl::Critic->import(@config);
+};
+
+if ($@) {
+    plan(
+        skip_all => 'Test::Perl::Critic required for testing PBP compliance');
 }
 
-Test::Perl::Critic::all_critic_ok();
+all_critic_ok();

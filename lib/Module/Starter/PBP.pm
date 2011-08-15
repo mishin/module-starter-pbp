@@ -1,11 +1,11 @@
 package Module::Starter::PBP;
 use base 'Module::Starter::Simple';
 
-use version; $VERSION = qv('0.0.4');
-
 use warnings;
 use strict;
 use Carp;
+
+use version; our $VERSION = qv('0.0.4');
 
 sub module_guts {
     my $self = shift;
@@ -608,7 +608,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; $VERSION = qv('0.0.3');
+use version; our $VERSION = qv('0.0.1');
 
 # Other recommended modules (uncomment to use):
 #  use IO::Prompt;
